@@ -1,6 +1,7 @@
 import React from "react";
 const Popup = ({ onClose }) => {
     return (
+      <>
       <div className="fixed inset-0 bg-gray-500 bg-opacity-50 flex justify-center items-center z-50">
         <div className="bg-white p-6 rounded-lg shadow-lg w-96">
           <div className="flex justify-between items-center mb-4">
@@ -24,6 +25,7 @@ const Popup = ({ onClose }) => {
           </div>
         </div>
       </div>
+      </>
     );
   };
   
