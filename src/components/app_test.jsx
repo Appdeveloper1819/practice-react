@@ -2,6 +2,7 @@ import { useState } from "react";
 import Sidebar from "./home";
 import Popup from "./popup";
 
+
 const AppTest = () => {
   const [options, setOptions] = useState([
     "iPhone 15",
@@ -27,7 +28,6 @@ const handlePopupClose = () => {
   setIsSidebarOpen(false);
 };
 
-
   return (
     <>
       <div className="flex items-center justify-center mt-6">
@@ -50,7 +50,6 @@ const handlePopupClose = () => {
         addOption={addOption}
         removeOption={removeOption}
         updateOption={updateOption}
-        // title={title}
         setTitle={setTitle}
         fieldUsage={fieldUsage}
         setFieldUsage={setFieldUsage}
@@ -63,6 +62,7 @@ const handlePopupClose = () => {
       {isPopup && 
       <Popup onClose={() => handlePopupClose(false)} 
       />}
+      
     </>
   );
 };

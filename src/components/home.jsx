@@ -15,10 +15,9 @@ const Sidebar = ({
 }) => {
   return (
     <div
-      className={`fixed top-0 right-0 h-full w-full max-w-md bg-white shadow-lg p-4 overflow-y-auto z-50 space-y-4 transform transition-transform duration-300 ${
+      className={`fixed top-0 right-0 h-full w-full max-w-md bg-white shadow-lg overflow-y-auto z-50 space-y-4 py-4 px-2  transition-all duration-300 ${
         isOpen ? "translate-x-0" : "translate-x-full"
-      }`}
-    >
+      }`}>
       <div className="flex justify-between items-center">
         <div>
           <h2 className="text-xl font-semibold">Create Custom Field</h2>
@@ -26,8 +25,7 @@ const Sidebar = ({
         </div>
         <button
           onClick={toggleSidebar}
-          className="text-gray-600 hover:text-gray-800 text-lg"
-        >
+          className="text-gray-600 hover:text-gray-800 text-lg">
           <i className="material-symbols-rounded">close</i>
         </button>
       </div>
@@ -47,8 +45,7 @@ const Sidebar = ({
           value={title}
           onChange={(e) => setTitle(e.target.value)}
           className="mt-1 block w-full border rounded p-2"
-          placeholder="Select your iPhone"
-        />
+          placeholder="Select your iPhone"/>
       </div>
 
       <div>
@@ -64,12 +61,9 @@ const Sidebar = ({
               <input
                 value={opt}
                 onChange={(e) => updateOption(e.target.value, idx)}
-                className="w-full pl-8 pr-8 border rounded p-2"
-              />
-              <i
-                className="material-symbols-rounded absolute right-2 top-1/2 -translate-y-1/2 text-red-500 cursor-pointer"
-                onClick={() => removeOption(idx)}
-              >
+                className="w-full pl-8 pr-8 border rounded p-2"/>
+              <i className="material-symbols-rounded absolute right-2 top-1/2 -translate-y-1/2 text-red-500 cursor-pointer"
+                onClick={() => removeOption(idx)}>
                 close
               </i>
             </div>
@@ -79,7 +73,6 @@ const Sidebar = ({
           + Add Option
         </button>
       </div>
-
       <label className="block text-sm font-medium">Field Usage</label>
       <div className="flex items-center gap-2">
         <input
@@ -112,8 +105,7 @@ const Sidebar = ({
         </button>
         <button
           className="px-4 py-2 rounded bg-blue-600 text-white"
-          onClick={onCreate}
-        >
+          onClick={onCreate}>
           Create Field
         </button>
       </div>
